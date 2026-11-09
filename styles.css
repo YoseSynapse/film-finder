@@ -44,13 +44,14 @@ font-size: 16px;
 
 .results{
     display: flex;
+    flex-wrap: wrap;
     gap: 16px;
-    overflow-x: auto;
     padding-bottom: 12px;
 }
 
 .movie{
-    flex: 0 0 180px;
+    flex: 1 1 180px;
+    max-width: 220px;
     background-color: #1f1f1f;
     border-radius: 8px;
     padding: 12px;
@@ -83,4 +84,22 @@ font-size: 16px;
 
 .results.buffering img{
     filter: grayscale(100%);  opacity: 0.4;
+}
+footer {
+  padding: 24px;
+  color: #b3b3b3;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .movie {
+    flex-basis: 45%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .movie {
+    flex-basis: 100%;
+  }
 }
